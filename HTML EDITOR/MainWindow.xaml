@@ -1,0 +1,48 @@
+﻿<Window x:Class="HTML_EDITOR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HTML_EDITOR"
+        mc:Ignorable="d"
+        Title="HTML EDITOR" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" IsEnabled="False"></MenuItem>
+                <MenuItem x:Name="saveButton" IsEnabled="False" Header="Сохранить" Click="saveButton_Click"></MenuItem>
+                <MenuItem Header="Сохранить как" IsEnabled="False"></MenuItem>
+
+
+            </MenuItem>
+        </Menu>
+        
+        <ScrollViewer Margin="0,20,0,0">
+            <StackPanel Margin="10,20,10,10">
+                <Label Content="Введите ссылку на репозиторий:"></Label>
+                <DockPanel Margin="10">
+                    <TextBox x:Name="urlTextBox" IsReadOnly="False" HorizontalAlignment="Left" Width="300" Margin="10,0,10,0"></TextBox>
+                    <Button x:Name="downlodButton" Content="Скачать" Click="downlodButton_Click" HorizontalAlignment="Left" ></Button>
+                </DockPanel>
+                <Label Content="Изменить текст"></Label>
+                <StackPanel x:Name="textsEditStack">
+               
+                    
+                </StackPanel>
+                <Label Content="Изменить изображение"></Label>
+                <StackPanel  x:Name="imgEditStack">
+                    
+                  
+
+                </StackPanel>
+                <Label Content="Изменить ссылки"></Label>
+                <StackPanel  x:Name="linksEditStack">
+               
+                </StackPanel>
+                <Label x:Name="statusBar" ></Label>
+            </StackPanel>
+            
+        </ScrollViewer>
+     
+    </Grid>
+</Window>
